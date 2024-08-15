@@ -28,12 +28,32 @@ if (fontSizeInput) {
 // 3
 
 const colorChangingButton = document.querySelector('#color-changing-button');
-const greenBlackParagraphs = document.querySelectorAll('.green-black-paragraph');
+const blackParagraphs = document.querySelectorAll('.black-paragraph');
 
 if (colorChangingButton) {
     colorChangingButton.addEventListener('click', function() {
-        greenBlackParagraphs.forEach(function(paragraph) {
+        blackParagraphs.forEach(function(paragraph) {
             paragraph.classList.toggle('green-color-paragraph');
         })
+    })
+}
+
+// 4
+
+const textInput = document.querySelector('#text-input');
+const textChangingButton = document.querySelector('#text-changing-button');
+
+if (textChangingButton) {
+
+}
+
+// 5
+
+const yellowButton = document.querySelector('.yellow-button');
+
+if (yellowButton) {
+    yellowButton.addEventListener('click', function() {
+        yellowButton.classList.toggle('red-button');
+        yellowButton.classList.toggle('yellow-button');
     })
 }
