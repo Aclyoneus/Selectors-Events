@@ -2,7 +2,6 @@
 
 const backgroundChangingButton = document.querySelector('#background-changing-button');
 const colorInput = document.querySelector('#color-input');
-
 if (backgroundChangingButton && colorInput) {
     backgroundChangingButton.addEventListener('click', function() {
         const inputText = colorInput.value;
@@ -14,7 +13,6 @@ if (backgroundChangingButton && colorInput) {
 
 const fontSizeInput = document.querySelector('#font-size-input');
 const fontSizeParagraph = document.querySelector('#font-size-paragraph');
-
 if (fontSizeInput) {
     fontSizeInput.addEventListener('input', function() {
         let inputNumber = fontSizeInput.value;
@@ -29,7 +27,6 @@ if (fontSizeInput) {
 
 const colorChangingButton = document.querySelector('#color-changing-button');
 const blackParagraphs = document.querySelectorAll('.black-paragraph');
-
 if (colorChangingButton) {
     colorChangingButton.addEventListener('click', function() {
         blackParagraphs.forEach(function(paragraph) {
@@ -42,7 +39,6 @@ if (colorChangingButton) {
 
 const textInput = document.querySelector('#text-input');
 const textChangingButton = document.querySelector('#text-changing-button');
-
 if (textChangingButton) {
 
 }
@@ -50,10 +46,21 @@ if (textChangingButton) {
 // 5
 
 const yellowButton = document.querySelector('.yellow-button');
-
 if (yellowButton) {
     yellowButton.addEventListener('click', function() {
         yellowButton.classList.toggle('red-button');
         yellowButton.classList.toggle('yellow-button');
+    })
+}
+
+// 6
+
+const clickCountButton = document.querySelector('#click-count-button');
+const clickCountParagraph = document.querySelector('#click-count-paragraph');
+let clickCount = 0;
+if (clickCountButton) {
+    clickCountButton.addEventListener('click', function() {
+        clickCount = clickCount + 1;
+        clickCountParagraph.textContent = clickCount;
     })
 }
