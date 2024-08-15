@@ -64,3 +64,15 @@ if (clickCountButton) {
         clickCountParagraph.textContent = clickCount;
     })
 }
+
+// 7
+
+const buttons = document.querySelectorAll('.click-button');
+const paragraphShowingButtonClicked = document.querySelector('#paragraph-showing-button-clicked');
+if (buttons) {
+    buttons.forEach(function(button, index) {
+        button.addEventListener('click', function() {
+            paragraphShowingButtonClicked.textContent = `Button ${index + 1} clicked`;
+        })
+    })
+}
