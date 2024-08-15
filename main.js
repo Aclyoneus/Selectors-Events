@@ -76,3 +76,15 @@ if (buttons) {
         })
     })
 }
+
+// 8
+
+const hoverReactingInput = document.querySelector('#hover-reacting-input');
+if (hoverReactingInput) {
+    hoverReactingInput.addEventListener('mouseover', function() {
+        hoverReactingInput.value = `The input is hovered over`;
+    })
+    hoverReactingInput.addEventListener('mouseout', function() {
+        hoverReactingInput.value = ``;
+    })
+}
