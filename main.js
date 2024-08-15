@@ -24,3 +24,16 @@ if (fontSizeInput) {
         fontSizeParagraph.style.fontSize = `${inputNumber}px`;
     })
 }
+
+// 3
+
+const colorChangingButton = document.querySelector('#color-changing-button');
+const greenBlackParagraphs = document.querySelectorAll('.green-black-paragraph');
+
+if (colorChangingButton) {
+    colorChangingButton.addEventListener('click', function() {
+        greenBlackParagraphs.forEach(function(paragraph) {
+            paragraph.classList.toggle('green-color-paragraph');
+        })
+    })
+}
