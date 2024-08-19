@@ -40,10 +40,7 @@ if (colorChangingButton) {
 const textInput = document.querySelector('#text-input');
 const textChangingButton = document.querySelector('#text-changing-button');
 if (textChangingButton && textInput) {
-    document.addEventListener('click', function(event) {
-        if (event.target === textInput || event.target === textChangingButton) {
-            return;
-        }
+    textInput.addEventListener('blur', function() {
         if (textInput.value.trim() !== '') {
             textChangingButton.textContent = textInput.value;
         } else {
@@ -53,7 +50,7 @@ if (textChangingButton && textInput) {
     textChangingButton.addEventListener('click', function() {
         textChangingButton.textContent = 'Click';
         textInput.value = '';
-    });
+    })
 }
 
 // 5
